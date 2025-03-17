@@ -5,15 +5,15 @@ TypeScript type definitions for Treege - a library for handling tree data struct
 ## Installation
 
 ```bash
-  npm install @tracktor/types-treege
+  npm install --save-dev @tracktor/types-treege 
 ```
 
 or with other package manager:
 
 ```bash
-  yarn add @tracktor/types-treege
-  bun add @types/treege
-  pnpm add @tracktor/types-treege
+  yarn add --dev @tracktor/types-treege
+  bun add --dev @types/treege
+  pnpm add --dev @tracktor/types-treege
 ```
 
 ## Usage
