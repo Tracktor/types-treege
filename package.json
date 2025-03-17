@@ -1,0 +1,27 @@
+{
+  "name": "@tracktor/types-treege",
+  "version": "0.1.0",
+  "author": "Mickaël Austoni",
+  "description": "TypeScript type definitions for Treege",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.d.ts",
+  "files": ["dist"],
+  "keywords": [
+    "typescript",
+    "types",
+    "treege"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint ."
+  },
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.21.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1"
+  }
+}
