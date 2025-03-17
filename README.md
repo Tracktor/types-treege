@@ -5,17 +5,22 @@ TypeScript type definitions for Treege - a library for handling tree data struct
 ## Installation
 
 ```bash
-npm install @types/treege
-# or
-bun add @types/treege
+  npm install @tracktor/types-treege
+```
+
+or with other package manager:
+
+```bash
+  yarn add @tracktor/types-treege
+  bun add @types/treege
+  pnpm add @tracktor/types-treege
 ```
 
 ## Usage
 
 ```typescript
-import { TreeNode } from '@types/treege';
+import { TreeNode } from '@tracktor/types-treege';
 
-// Create a simple tree
 const myTree: TreeNode = {
   uuid: "root",
   attributes: {
@@ -26,23 +31,6 @@ const myTree: TreeNode = {
     type: "text"
   },
   children: []
-};
-
-// Use with a child node
-const treeWithChild: TreeNode = {
-  ...myTree,
-  children: [
-    {
-      uuid: "child1",
-      attributes: {
-        depth: 1,
-        name: "child1",
-        label: "Child Node",
-        type: "text"
-      },
-      children: []
-    }
-  ]
 };
 ```
 
