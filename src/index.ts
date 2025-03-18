@@ -45,7 +45,7 @@ export interface PathKey {
 }
 
 export interface Route {
-  url: string;
+  url?: string;
   searchKey?: string;
   pathKey?: PathKey;
   params?: Params[];
@@ -53,6 +53,13 @@ export interface Route {
 
 export interface TreeNode {
   uuid: string;
+  children: TreeNode[];
+  treeId?: string;
+  treePath?: string;
+  childrenTreeRest?: {
+    currentTree: TreeNode;
+    treePath?: string;
+  }[];
   attributes:
     | {
     depth: number;
@@ -113,8 +120,6 @@ export interface TreeNode {
     pattern?: string;
     patternMessage?: string;
   };
-  children: TreeNode[];
-  treeId?: string;
 }
 
 export interface TreeNodeField {

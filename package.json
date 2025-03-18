@@ -1,6 +1,6 @@
 {
   "name": "@tracktor/types-treege",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "Mickaël Austoni",
   "description": "TypeScript type definitions for Treege",
   "types": "./dist/index.d.ts",
@@ -15,6 +15,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint .",
+    "prepublishOnly": "npm run build",
     "publish": "npm publish"
   },
   "type": "module",
