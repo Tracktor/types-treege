@@ -110,6 +110,7 @@ export interface TreeNode {
     initialQuery?: boolean;
     pattern?: string;
     patternMessage?: string;
+    isMultiple?: boolean;
   };
   children: TreeNode[];
   treeId?: string;
@@ -137,6 +138,7 @@ export interface TreeNodeField {
   treePath?: string;
   repeatable?: boolean;
   hiddenValue?: string;
+  isMultiple?: boolean;
 }
 
 export interface TreePath {
