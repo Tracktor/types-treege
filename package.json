@@ -1,6 +1,6 @@
 {
   "name": "@tracktor/types-treege",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Mickaël Austoni",
   "description": "TypeScript type definitions for Treege",
   "types": "./dist/index.d.ts",

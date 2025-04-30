@@ -167,11 +167,3 @@ export interface BackendConfig {
 }
 
 export type ModalType = 'add' | 'edit' | 'delete' | 'save' | null;
-
-/**
- * Check if the object is a TreeNode
- * @param node
- */
-export const isTreeNode = (node: unknown | undefined): node is TreeNode =>
-  !(!node || typeof node !== "object" || !("uuid" in node) || !("attributes" in node) || !("children" in node));
-
