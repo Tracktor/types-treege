@@ -51,7 +51,7 @@ export interface Route {
   params?: Params[];
 }
 
-interface DefaultValueFromAncestor {
+export interface DefaultValueFromAncestor {
   /**
    * Unique identifier of the ancestor element from which the default value is inherited.
    */
