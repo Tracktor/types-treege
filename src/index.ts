@@ -2,27 +2,27 @@
  * Type definitions for Treege
  */
 export type FieldType =
-  | 'text'
-  | 'number'
-  | 'email'
-  | 'file'
-  | 'password'
-  | 'tel'
-  | 'address'
-  | 'url'
-  | 'date'
-  | 'dateRange'
-  | 'time'
-  | 'timeRange'
-  | 'switch'
-  | 'checkbox'
-  | 'hidden'
-  | 'tree'
-  | 'radio'
-  | 'select'
-  | 'autocomplete'
-  | 'dynamicSelect'
-  | 'title';
+    | 'text'
+    | 'number'
+    | 'email'
+    | 'file'
+    | 'password'
+    | 'tel'
+    | 'address'
+    | 'url'
+    | 'date'
+    | 'dateRange'
+    | 'time'
+    | 'timeRange'
+    | 'switch'
+    | 'checkbox'
+    | 'hidden'
+    | 'tree'
+    | 'radio'
+    | 'select'
+    | 'autocomplete'
+    | 'dynamicSelect'
+    | 'title';
 
 export interface TreeValues {
   id: string;
@@ -51,6 +51,29 @@ export interface Route {
   params?: Params[];
 }
 
+interface DefaultValueFromAncestor {
+  /**
+   * Unique identifier of the ancestor element from which the default value is inherited.
+   */
+  uuid: string;
+
+  /**
+   * (Optional) The name of the output model containing the value to map from.
+   * For example, this could refer to an API or a structured object name.
+   */
+  outputModel?: string;
+
+  /**
+   * (Optional) The key path of the object in the output model.
+   * For example, if the output model is an API response: "address.ZipCode" maps to the key "ZipCode" inside the object "address".
+   *
+   * This can also be a static value (e.g., a hardcoded string like "DefaultCountryCode" or "12345").
+   * This can also be a boolean value (e.g., a hardcoded boolean like "true" or "false").
+   */
+  inputObjectKey?: string;
+}
+
+
 export interface TreeNode {
   uuid: string;
   children: TreeNode[];
@@ -61,7 +84,7 @@ export interface TreeNode {
     treePath?: string;
   }[];
   attributes:
-    | {
+      | {
     depth: number;
     tag?: string;
     helperText?: string;
@@ -75,6 +98,7 @@ export interface TreeNode {
     type: FieldType;
     value?: never;
     values?: TreeValues[];
+    defaultValueFromAncestor?: DefaultValueFromAncestor;
     message?: never;
     tree?: TreeNode;
     treePath?: string;
@@ -92,7 +116,7 @@ export interface TreeNode {
       off?: string;
     };
   }
-    | {
+      | {
     depth: number;
     tag?: string;
     helperText?: string;
@@ -107,6 +131,7 @@ export interface TreeNode {
     type?: never;
     value: string;
     values?: never;
+    defaultValueFromAncestor?: DefaultValueFromAncestor;
     message?: string;
     tree?: never;
     treePath?: never;
