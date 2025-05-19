@@ -99,6 +99,7 @@ export interface TreeNode {
     value?: never;
     values?: TreeValues[];
     defaultValueFromAncestor?: DefaultValueFromAncestor;
+    ancestorId?: string;
     message?: never;
     tree?: TreeNode;
     treePath?: string;
@@ -132,6 +133,7 @@ export interface TreeNode {
     value: string;
     values?: never;
     defaultValueFromAncestor?: DefaultValueFromAncestor;
+    ancestorId?: string;
     message?: string;
     tree?: never;
     treePath?: never;
