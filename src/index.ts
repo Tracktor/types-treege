@@ -53,6 +53,12 @@ export interface Route {
 
 export interface DefaultValueFromAncestor {
   /**
+   * (Optional) The name of the ancestor node to get the value from.
+   * For example, this could refer to a parent node or a specific ancestor in the tree structure.
+   */
+  uuid?: string;
+
+  /**
    * (Optional) The name of the output model containing the value to map from.
    * For example, this could refer to an API or a structured object name.
    */
@@ -65,14 +71,6 @@ export interface DefaultValueFromAncestor {
    * This can also be a boolean value (e.g., a hardcoded boolean like "true" or "false").
    */
   inputObjectKey?: string;
-
-    /**
-     * (Optional) The value to be used for the mapping.
-     * This can be a string, number, boolean, or any other type as per the requirements.
-     * This can also be a static value (e.g., a hardcoded string like "DefaultCountryCode" or "12345").
-     * This can also be a boolean value (e.g., a hardcoded boolean like "true" or "false")
-     */
-  value?: unknown;
 }
 
 
@@ -101,7 +99,6 @@ export interface TreeNode {
     value?: never;
     values?: TreeValues[];
     defaultValueFromAncestor?: DefaultValueFromAncestor;
-    ancestorId?: string;
     message?: never;
     tree?: TreeNode;
     treePath?: string;
@@ -135,7 +132,6 @@ export interface TreeNode {
     value: string;
     values?: never;
     defaultValueFromAncestor?: DefaultValueFromAncestor;
-    ancestorId?: string;
     message?: string;
     tree?: never;
     treePath?: never;
