@@ -53,10 +53,14 @@ export interface Route {
 
 export interface DefaultValueFromAncestor {
   /**
-   * (Optional) The name of the ancestor node to get the value from.
-   * For example, this could refer to a parent node or a specific ancestor in the tree structure.
+   * (Optional) Unique identifier for the ancestor node.
    */
   uuid?: string;
+
+    /**
+     * (Optional) The name of the ancestor node to get the value from.
+     */
+  name?: string;
 
   /**
    * (Optional) The name of the output model containing the value to map from.
