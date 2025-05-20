@@ -53,11 +53,6 @@ export interface Route {
 
 export interface DefaultValueFromAncestor {
   /**
-   * Unique identifier of the ancestor element from which the default value is inherited.
-   */
-  uuid: string;
-
-  /**
    * (Optional) The name of the output model containing the value to map from.
    * For example, this could refer to an API or a structured object name.
    */
@@ -66,11 +61,18 @@ export interface DefaultValueFromAncestor {
   /**
    * (Optional) The key path of the object in the output model.
    * For example, if the output model is an API response: "address.ZipCode" maps to the key "ZipCode" inside the object "address".
-   *
    * This can also be a static value (e.g., a hardcoded string like "DefaultCountryCode" or "12345").
    * This can also be a boolean value (e.g., a hardcoded boolean like "true" or "false").
    */
   inputObjectKey?: string;
+
+    /**
+     * (Optional) The value to be used for the mapping.
+     * This can be a string, number, boolean, or any other type as per the requirements.
+     * This can also be a static value (e.g., a hardcoded string like "DefaultCountryCode" or "12345").
+     * This can also be a boolean value (e.g., a hardcoded boolean like "true" or "false")
+     */
+  value?: unknown;
 }
 
 
