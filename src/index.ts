@@ -58,12 +58,11 @@ export interface DefaultValueFromAncestor {
   uuid?: string;
 
   /**
-   * (Optional) The key path of the object in the output model.
-   * For example, if the output model is an API response: "address.ZipCode" maps to the key "ZipCode" inside the object "address".
-   * This can also be a static value (e.g., a hardcoded string like "DefaultCountryCode" or "12345").
-   * This can also be a boolean value (e.g., a hardcoded boolean like "true" or "false").
+   * (Optional) Represents either:
+   * - a key path to retrieve a value from the ancestor object (e.g. "address.ZipCode"), or
+   * - a literal static value (e.g. "DefaultCountryCode", true, 123).
    */
-  inputObjectKey?: string;
+  sourceValue?: string | number | boolean;
 }
 
 
