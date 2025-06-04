@@ -57,17 +57,6 @@ export interface DefaultValueFromAncestor {
    */
   uuid?: string;
 
-    /**
-     * (Optional) The name of the ancestor node to get the value from.
-     */
-  name?: string;
-
-  /**
-   * (Optional) The name of the output model containing the value to map from.
-   * For example, this could refer to an API or a structured object name.
-   */
-  outputModel?: string;
-
   /**
    * (Optional) The key path of the object in the output model.
    * For example, if the output model is an API response: "address.ZipCode" maps to the key "ZipCode" inside the object "address".
