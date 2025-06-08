@@ -104,7 +104,6 @@ export interface TreeNode {
     hiddenValue?: string;
     isDisabledPast?: boolean;
     route?: Route;
-    parentRef?: string;
     initialQuery?: boolean;
     isMultiple?: boolean;
     pattern?: string;
@@ -137,7 +136,6 @@ export interface TreeNode {
     hiddenValue?: never;
     isDisabledPast?: boolean;
     route?: Route;
-    parentRef?: string;
     initialQuery?: boolean;
     isMultiple?: boolean;
     pattern?: string;
