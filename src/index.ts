@@ -34,7 +34,16 @@ export interface TreeValues {
 export interface Params {
   id: string;
   key: string;
-  value: string;
+  /**
+   * (Optional) Static value to be used as a parameter.
+   */
+
+  staticValue?: string;
+    /**
+     * (Optional) Unique identifier for the ancestor node.
+     * Example: "ancestorUuid": "123e4567-e89b-12d3-a456-426614174000"
+     */
+  ancestorUuid?: string;
 }
 
 export interface PathKey {
@@ -63,11 +72,6 @@ export interface DefaultValueFromAncestor {
    * - a literal static value (e.g. "DefaultCountryCode", true, 123).
    */
   sourceValue?: string | number | boolean;
-
-  /**
-   * (Optional) Define if the sourceValue should be used in query parameters for API calls.
-   */
-  useSourceValueAsAPIParam?: boolean;
 }
 
 
