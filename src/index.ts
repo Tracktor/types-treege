@@ -64,11 +64,10 @@ export interface DefaultValueFromAncestor {
    */
   sourceValue?: string | number | boolean;
 
-    /**
-     * (Optional) Define if the value should be used in query parameters for API calls.
-     * Will only be used if the `route` property is defined (e.g. for dynamicSelect or autocomplete).
-     */
-    useInQuery?: boolean;
+  /**
+   * (Optional) Define if the sourceValue should be used in query parameters for API calls.
+   */
+  useSourceValueAsAPIParam?: boolean;
 }
 
 
